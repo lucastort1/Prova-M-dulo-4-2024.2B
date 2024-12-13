@@ -1,0 +1,17 @@
+Neste projeto foi utilizado os seguintes itens para o seu funcionamento:
+
+- ESP32;
+- LED Verde;
+- LED Vermelho;
+- LED Amarelo;
+- Botão;
+- Sensor de luz (LDR);
+- Fios Jumpers;
+- Resistores.
+
+Na inicialização do nosso projeto todos os LEDs devem estar apagados, assim será identificado que está funcionando. A partir disso, o microcontrolador ESP32 via mandar um sinal para o sensor de luminosidade (LDR), para que o este sensor identifique se está de dia ou de noite, se for identificado que está de noite o protótipo deve acionar o modo noturno dele e que será possível identificar com base no LED amarelo que estará piscando continuamente a cada segundo. Porém, caso seja identificado que está de dia o protótipo ficará no seu modo convencional, sendo possível identificar com base nos três LEDs utilizados, sensdo o LED verde que ficará ligado por 3 segundo, o LED amarelo ficará ligado por 2 segundos e por fim o LED vermelho que ficará ligado por 5 segundos.
+
+Indo para o funcionamento na prática, quando estiver de dia e o semáforo estiver fechado, ou seja, só o LED vermelho aceso, e o botão for pressionado, o semáforo deve abrir 1 segundo após o pressionamento do botão.
+Porém, mesmo quando estiver de dia e o semáforo estiver fechado, se por acaso o botão for pressionado três vezes seguidas será enviado um alerta em HTTP no seguinte site: "http://www.google.com.br/".
+
+Após isso, o protótipo entra em um modo de loop para que todo esse processo seja feito novamente.
